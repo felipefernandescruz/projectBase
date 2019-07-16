@@ -1,29 +1,24 @@
-﻿<Properties StartupConfiguration="{F308A3B5-80BE-4225-A5C5-A4157DE7B5C4}|Default">
-  <MonoDevelop.Ide.ItemProperties.Domain PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Web/Controllers/SampleDataController.cs">
+﻿<Properties StartupConfiguration="{80FFCA32-3436-426F-B92C-CBB8C8B90A39}|Default">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Web/Controllers/SampleDataController.cs" Line="24" Column="37" />
+      <File FileName="Web/Controllers/UserController.cs" Line="13" Column="80" />
+      <File FileName="Web/Interfaces/IBaseController.cs" Line="4" Column="37" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ProjectBase" expanded="True">
-            <Node name="Web" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="SampleDataController.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="ProjectBase" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.Web PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.ItemProperties.Infrasctructure FirstBuild="True" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Web/Controllers/UserController.cs" relfile="Web/Controllers/UserController.cs" line="22" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
