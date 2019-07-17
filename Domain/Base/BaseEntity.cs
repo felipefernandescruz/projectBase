@@ -7,14 +7,18 @@ namespace Domain.Base
 {
     public class BaseEntity : IBaseEntity
     {
+
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
 
+        [BsonElement("CreatedAt")]
         public DateTime? CreatedAt { get; set; }
 
+        [BsonElement("UpdatedAt")]
         public DateTime? UpdatedAt { get; set; }
 
+        [BsonElement("DeletedAt")]
         public DateTime? DeletedAt { get; set; }
 
         public BaseEntity()
@@ -32,14 +36,16 @@ namespace Domain.Base
             UpdatedAt = DateTime.Now.BrazilTimeZone();
         }
 
-        public void ChangeCreatedAt(DateTime createdAt)
+        protected void ChangeCreatedAt(DateTime createdAt)
         {
             CreatedAt = createdAt;
         }
 
-        public void ChangeUpdatedAt(DateTime? updatedAt)
+        protected void ChangeUpdatedAt(DateTime? updatedAt)
         {
             UpdatedAt = updatedAt;
         }
+
+
     }
 }

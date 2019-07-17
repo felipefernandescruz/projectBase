@@ -3,6 +3,8 @@ using Domain.Base;
 using Domain.Exceptions;
 using Domain.Shared.Enum;
 using Infrasctructure.Extensions;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace Domain.Users
 {
@@ -22,16 +24,23 @@ namespace Domain.Users
             ChangeGender(gender);
         }
 
+
+        [BsonElement("Name")]
         internal string Name { get; private set; }
 
+        [BsonElement("LastName")]
         internal string LastName { get; private set; }
 
+        [BsonElement("Email")]
         internal string Email { get; private set; }
 
+        [BsonElement("Password")]
         internal string Password { get; private set; }
 
+        [BsonElement("DateOfBirth")]
         internal DateTime? DateOfBirth { get; private set; }
 
+        [BsonElement("Gender")]
         internal GenderEnum? Gender { get; private set; }
 
 

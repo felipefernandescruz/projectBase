@@ -1,9 +1,3 @@
-/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/obj/Debug/netcoreapp2.1/Domain.csprojAssemblyReference.cache
-/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/obj/Debug/netcoreapp2.1/Domain.csproj.CoreCompileInputs.cache
-/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/obj/Debug/netcoreapp2.1/Domain.RazorAssemblyInfo.cache
-/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/obj/Debug/netcoreapp2.1/Domain.RazorAssemblyInfo.cs
-/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/obj/Debug/netcoreapp2.1/Domain.AssemblyInfoInputs.cache
-/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/obj/Debug/netcoreapp2.1/Domain.AssemblyInfo.cs
 /Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/bin/Debug/netcoreapp2.1/Domain.deps.json
 /Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/bin/Debug/netcoreapp2.1/Domain.runtimeconfig.json
 /Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/bin/Debug/netcoreapp2.1/Domain.runtimeconfig.dev.json
@@ -11,6 +5,12 @@
 /Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/bin/Debug/netcoreapp2.1/Domain.pdb
 /Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/bin/Debug/netcoreapp2.1/Infrastructure.dll
 /Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/bin/Debug/netcoreapp2.1/Infrastructure.pdb
+/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/obj/Debug/netcoreapp2.1/Domain.csprojAssemblyReference.cache
+/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/obj/Debug/netcoreapp2.1/Domain.csproj.CoreCompileInputs.cache
+/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/obj/Debug/netcoreapp2.1/Domain.RazorAssemblyInfo.cache
+/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/obj/Debug/netcoreapp2.1/Domain.RazorAssemblyInfo.cs
+/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/obj/Debug/netcoreapp2.1/Domain.AssemblyInfoInputs.cache
+/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/obj/Debug/netcoreapp2.1/Domain.AssemblyInfo.cs
 /Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/obj/Debug/netcoreapp2.1/Domain.RazorTargetAssemblyInfo.cache
 /Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/obj/Debug/netcoreapp2.1/Domain.csproj.CopyComplete
 /Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/obj/Debug/netcoreapp2.1/Domain.dll

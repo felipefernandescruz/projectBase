@@ -19,9 +19,6 @@ namespace Web.Controllers
         [HttpGet]
         public List<UserModel> Get()
         {
-            var date = new DateTime();
-            Service.Create("Teste", "Teste", "teste@teste.com", "123456", date, GenderEnum.Female);
-           // Service.Update("5d2146a6c73a4b19f46cb145", "TesteUp", "TesteUp", "teste@teste.com", date, GenderEnum.Female);
             return Service.List();
         }
 

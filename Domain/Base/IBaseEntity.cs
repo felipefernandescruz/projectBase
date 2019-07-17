@@ -5,7 +5,5 @@ namespace Domain.Base
     {
         void MarkAsDeleted();
         void MarkAsUpdated();
-        void ChangeCreatedAt(DateTime createdAt);
-        void ChangeUpdatedAt(DateTime? updatedAt);
     }
 }
