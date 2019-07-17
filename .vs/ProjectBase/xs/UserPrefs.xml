@@ -1,21 +1,9 @@
 ﻿<Properties StartupConfiguration="{80FFCA32-3436-426F-B92C-CBB8C8B90A39}|Default">
   <MonoDevelop.Ide.Workbench>
-    <Files>
-      <File FileName="Infrastructure/Repository/RepositoryBase.cs" Line="20" Column="42" />
-      <File FileName="Domain/Users/UserService.cs" Line="13" Column="1" />
-      <File FileName="Web/Controllers/UserController.cs" Line="21" Column="10" />
-      <File FileName="Domain/Users/User.cs" Line="27" Column="1" />
-      <File FileName="Domain/Users/UserRepository.cs" Line="11" Column="10" />
-      <File FileName="Domain/Base/BaseEntity.cs" Line="29" Column="36" />
-      <File FileName="Domain/Base/IBaseEntity.cs" Line="7" Column="30" />
-      <File FileName="Infrastructure/Extensions/DateTimeExtensions.cs" Line="9" Column="1" />
-    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ProjectBase" expanded="True" selected="True">
-            <Node name="Web" expanded="True" />
-          </Node>
+          <Node name="ProjectBase" expanded="True" selected="True" />
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
