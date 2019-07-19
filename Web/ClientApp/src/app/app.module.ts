@@ -1,4 +1,4 @@
-import { NgModule, Injector } from "@angular/core";
+import { NgModule, LOCALE_ID, Injector } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { RouteReuseStrategy } from "@angular/router";
 
@@ -14,6 +14,7 @@ import { AlertHelper } from "./shared/helpers/alert-helper";
 import { LoadingHelper } from "./shared/helpers/loading.helper";
 import { StorageHelper } from "./shared/helpers/storage.helper";
 import { ToastHelper } from "./shared/helpers/toast.helper";
+import { FormBuilder } from "@angular/forms";
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,7 +28,9 @@ import { ToastHelper } from "./shared/helpers/toast.helper";
     ToastHelper,
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    FormBuilder,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    { provide: LOCALE_ID, useValue: "pt-BR" }
   ],
   bootstrap: [AppComponent]
 })

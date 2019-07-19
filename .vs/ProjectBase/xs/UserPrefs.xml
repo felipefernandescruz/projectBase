@@ -1,9 +1,26 @@
 ﻿<Properties StartupConfiguration="{80FFCA32-3436-426F-B92C-CBB8C8B90A39}|Default">
   <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="Web/ClientApp/src/app/pages/auth/auth.router.ts" Line="21" Column="7" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ProjectBase" expanded="True" selected="True" />
+          <Node name="ProjectBase" expanded="True">
+            <Node name="Web" expanded="True">
+              <Node name="ClientApp" expanded="True">
+                <Node name="src" expanded="True">
+                  <Node name="app" expanded="True">
+                    <Node name="pages" expanded="True">
+                      <Node name="auth" expanded="True">
+                        <Node name="auth.router.ts" selected="True" />
+                      </Node>
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">

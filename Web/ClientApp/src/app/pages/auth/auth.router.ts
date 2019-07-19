@@ -1,22 +1,22 @@
-import { Routes } from '@angular/router';
-import { AppGuard } from 'src/app/app.guard';
+import { Routes } from "@angular/router";
+import { AppGuard } from "src/app/app.guard";
+import { userRoutes } from "../User/user.router";
 
 // Route Configuration
 export const authRoutes: Routes = [
   {
-    path: '',
-    redirectTo: 'login',
-    pathMatch: 'full'
+    path: "",
+    redirectTo: "login",
+    pathMatch: "full"
   },
   {
     canActivate: [AppGuard],
-    path: 'login',
-    loadChildren: './pages/auth/login/login.module#LoginPageModule'
-  },
-  {
-    canActivate: [AppGuard],
-    path: 'reset-password/:token',
-    loadChildren:
-      './pages/auth/reset-password/reset-password.module#ResetPasswordPageModule'
+    path: "login",
+    loadChildren: "./login/login.module#LoginPageModule"
   }
+  // {
+  //   canActivate: [AppGuard],
+  //   path: "user/new",
+  //   loadChildren: "../user/user-form/user-form.module#UserFormPageModule"
+  // }
 ];

@@ -8,11 +8,10 @@ export class AppGuard implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot) {
     const token = this.storageHelper.getToken();
-    console.log(route.routeConfig.path);
     if (
       !token &&
       route.routeConfig.path !== "login" &&
-      route.routeConfig.path !== "reset-password/:token"
+      route.routeConfig.path !== "user/new"
     ) {
       this.router.navigate(["login"]);
       return false;
