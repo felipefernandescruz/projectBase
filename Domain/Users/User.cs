@@ -14,14 +14,15 @@ namespace Domain.Users
         {
         }
 
-        internal User(string name, string lastName, string email, string password, DateTime? dateOfBirth, GenderEnum? gender)
+        internal User(string name, string lastName, string email, DateTime? dateOfBirth, GenderEnum? gender,PronounEnum? pronoun, string customGender)
         {
             ChangeName(name);
             ChangeLastName(lastName);
             ChangeEmail(email);
-            ChangePassword(password);
             ChangeDateOfBirth(dateOfBirth);
             ChangeGender(gender);
+            ChangePronoun(pronoun);
+            ChangeCustomGender(customGender);
         }
 
 
@@ -42,6 +43,12 @@ namespace Domain.Users
 
         [BsonElement("Gender")]
         internal GenderEnum? Gender { get; private set; }
+
+        [BsonElement("Pronoun")]
+        internal PronounEnum? Pronoun { get; private set; }
+
+        [BsonElement("CustomGender")]
+        internal string CustomGender { get; private set; }
 
 
         internal void ChangeName(string name)
@@ -84,6 +91,18 @@ namespace Domain.Users
         internal void ChangeGender(GenderEnum? gender)
         {
             Gender = gender;
+
+        }
+
+        internal void ChangePronoun(PronounEnum? pronoun)
+        {
+            Pronoun = pronoun;
+
+        }
+
+        internal void ChangeCustomGender(string customGender)
+        {
+            CustomGender = customGender;
 
         }
     }

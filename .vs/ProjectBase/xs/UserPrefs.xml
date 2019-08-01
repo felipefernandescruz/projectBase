@@ -1,25 +1,13 @@
 ﻿<Properties StartupConfiguration="{80FFCA32-3436-426F-B92C-CBB8C8B90A39}|Default">
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Web/ClientApp/src/app/pages/auth/auth.router.ts" Line="21" Column="7" />
+      <File FileName="Infrastructure/Repository/RepositoryBase.cs" Line="7" Column="111" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ProjectBase" expanded="True">
-            <Node name="Web" expanded="True">
-              <Node name="ClientApp" expanded="True">
-                <Node name="src" expanded="True">
-                  <Node name="app" expanded="True">
-                    <Node name="pages" expanded="True">
-                      <Node name="auth" expanded="True">
-                        <Node name="auth.router.ts" selected="True" />
-                      </Node>
-                    </Node>
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
+          <Node name="ProjectBase" expanded="True" selected="True">
+            <Node name="Domain" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -32,7 +20,9 @@
   <MonoDevelop.Ide.ItemProperties.Web PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Web/Controllers/UserController.cs" relfile="Web/Controllers/UserController.cs" line="28" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

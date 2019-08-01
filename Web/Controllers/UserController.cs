@@ -25,13 +25,13 @@ namespace Web.Controllers
         [HttpPost]
         public void Create([FromBody] UserModel model)
         {
-            Service.Create(model.name, model.lastName, model.email, model.password, model.dateOfBirth, model.gender);
+            Service.Create(model.name, model.lastName, model.email, model.password, model.dateOfBirth, model.gender,model.pronoum,model.customGender);
         }
 
         [HttpPut]
         public void Update([FromBody] UserModel model)
         {
-            Service.Update(model.id, model.name, model.lastName, model.email, model.dateOfBirth, model.gender);
+            Service.Update(model.id, model.name, model.lastName, model.email, model.dateOfBirth, model.gender,model.pronoum,model.customGender);
         }
 
         [HttpDelete("{id}")]

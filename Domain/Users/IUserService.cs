@@ -9,8 +9,8 @@ namespace Domain.Users
     {
         List<UserModel> List();
         UserModel GetById(string id);
-        void Create(string name, string lastName, string email, string password, DateTime? dateOfBirth, GenderEnum? gender);
-        void Update(string id, string name, string lastName, string email, DateTime? dateOfBirth, GenderEnum? gender);
+        void Create(string name, string lastName, string email, string password, DateTime? dateOfBirth, GenderEnum? gender, PronounEnum? pronoun, string customGender);
+        void Update(string id, string name, string lastName, string email, DateTime? dateOfBirth, GenderEnum? gender, PronounEnum? pronoun, string customGender);
         void Delete(string id);
     }
 }

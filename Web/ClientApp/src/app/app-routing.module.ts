@@ -2,7 +2,6 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { AppGuard } from "./app.guard";
 import { authRoutes } from "./pages/auth/auth.router";
-import { userRoutes } from "./pages/User/user.router";
 
 const routes: Routes = [
   { path: "", redirectTo: "", pathMatch: "full" },
@@ -12,7 +11,11 @@ const routes: Routes = [
     loadChildren: "./pages/home/home.module#HomePageModule"
   },
   ...authRoutes,
-  ...userRoutes
+  {
+    canActivate: [AppGuard],
+    path: "user/new",
+    loadChildren: "./pages/user/user-form/user-form.module#UserFormPageModule"
+  }
 ];
 
 @NgModule({

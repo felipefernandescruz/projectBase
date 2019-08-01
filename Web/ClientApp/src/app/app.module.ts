@@ -15,11 +15,17 @@ import { LoadingHelper } from "./shared/helpers/loading.helper";
 import { StorageHelper } from "./shared/helpers/storage.helper";
 import { ToastHelper } from "./shared/helpers/toast.helper";
 import { FormBuilder } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    HttpClientModule
+  ],
   providers: [
     AppGuard,
     AlertHelper,

@@ -14,9 +14,9 @@ namespace Domain.Users
         {
         }
 
-        public void Create(string name, string lastName, string email, string password, DateTime? dateOfBirth, GenderEnum? gender)
+        public void Create(string name, string lastName, string email, string password, DateTime? dateOfBirth, GenderEnum? gender, PronounEnum? pronoun, string customGender)
         {
-            var user = new User(name, lastName, email, password, dateOfBirth, gender);
+            var user = new User(name, lastName, email, dateOfBirth, gender, pronoun, customGender);
 
             Repository.Add(user);
         }
@@ -38,7 +38,7 @@ namespace Domain.Users
                 .ToList();
         }
 
-        public void Update(string id, string name, string lastName, string email, DateTime? dateOfBirth, GenderEnum? gender)
+        public void Update(string id, string name, string lastName, string email, DateTime? dateOfBirth, GenderEnum? gender, PronounEnum? pronoun, string customGender)
         {
             validateEmail(email, id);
 
