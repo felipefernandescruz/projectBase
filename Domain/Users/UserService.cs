@@ -107,9 +107,7 @@ namespace Domain.Users
             if (password != confirmPassword)
                 throw new DomainException("As senhas informadas não são iguais. Tente novamente");
 
-            var user = Repository.GetByEmail(email);
-
-            Repository.Update(user.Id, user);
+            var user = Repository.GetByEmail(email);           
 
             if (user == null)
                 throw new DomainException("Usuário não existe. Tente novamente");
@@ -119,10 +117,21 @@ namespace Domain.Users
             user.ChangePassword(password);
             user.ClearTokenGenerate();
             user.MarkAsUpdated();
-            
-            
+
+            Repository.Update(user.Id, user);
         }
 
-        
+        public void GenerateNewToken(string email)
+        {
+            var user = Repository.GetByEmail(email);
+            if(user == null)
+                throw new DomainException("Usuário não existe. Tente novamente");
+
+            user.ChangeTokenGenerate();
+            Repository.Update(user.Id, user);
+
+            SendCreatePasswordEmail(user.Email, user.Name, user.TokenGenerate);
+           
+        }
     }
 }

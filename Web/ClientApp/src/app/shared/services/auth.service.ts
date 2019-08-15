@@ -25,4 +25,18 @@ export class AuthService extends BaseService {
         })
       );
   }
+
+  public generateNewToken(email: string): Observable<string> {
+    this.setApiUrl(`/auth/${email}`);
+
+    return this.httpGet().pipe(
+      catchError(message => {
+        return throwError(
+          message
+            ? message
+            : 'Erro ao gerar token. Tente novamente'
+        );
+      })
+    );
+  }
 }

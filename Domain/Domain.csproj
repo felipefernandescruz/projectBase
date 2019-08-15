@@ -23,5 +23,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Shared\Enum\GenderEnum %28copy%29.cs" />
+    <Compile Remove="Base\IBaseEntity.cs" />
+    <Compile Remove="Base\BaseEntity.cs" />
   </ItemGroup>
 </Project>

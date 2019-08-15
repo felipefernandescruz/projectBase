@@ -22,5 +22,11 @@ namespace Web.Controllers
         {
             Service.UpdatePassword(model.email, model.token, model.password, model.confirmPassword);
         }
+
+        [HttpGet("{email}")]
+        public void GenerateNewToken(string email)
+        {
+            Service.GenerateNewToken(email);
+        }
     }
 }

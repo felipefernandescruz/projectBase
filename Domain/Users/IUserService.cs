@@ -13,5 +13,6 @@ namespace Domain.Users
         void Update(string id, string name, string lastName, string email, DateTime? dateOfBirth, GenderEnum? gender, PronounEnum? pronoun, string customGender);
         void Delete(string id);
         void UpdatePassword(string email, string token, string password, string confirmPassword);
+        void GenerateNewToken(string email);
     }
 }

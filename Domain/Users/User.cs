@@ -6,6 +6,7 @@ using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using System.Text;
 using Infrastructure.Extensions;
+using Infrastructure.Base;
 
 namespace Domain.Users
 {
