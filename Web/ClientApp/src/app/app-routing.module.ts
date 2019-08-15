@@ -15,6 +15,11 @@ const routes: Routes = [
     canActivate: [AppGuard],
     path: "user/new",
     loadChildren: "./pages/user/user-form/user-form.module#UserFormPageModule"
+  },
+  {
+    path: "user/athentication/:userEmail",
+    loadChildren:
+      "./pages/user/user-athentication/user-athentication.module#UserAthenticationPageModule"
   }
 ];
 

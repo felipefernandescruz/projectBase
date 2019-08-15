@@ -2,9 +2,10 @@
 using Domain.Base;
 using Domain.Exceptions;
 using Domain.Shared.Enum;
-using Infrasctructure.Extensions;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using System.Text;
+using Infrastructure.Extensions;
 
 namespace Domain.Users
 {
@@ -23,6 +24,7 @@ namespace Domain.Users
             ChangeGender(gender);
             ChangePronoun(pronoun);
             ChangeCustomGender(customGender);
+            ChangeStatus(StatusEnum.Pending);
         }
 
 
@@ -49,6 +51,16 @@ namespace Domain.Users
 
         [BsonElement("CustomGender")]
         internal string CustomGender { get; private set; }
+
+        [BsonElement("TokenGenerate")]
+        internal string TokenGenerate { get; private set; }
+
+        [BsonElement("TokenGenerateDate")]
+        [BsonDateTimeOptions(Kind = DateTimeKind.Local)]
+        internal DateTime? TokenGenerateDate { get; private set; }
+
+        [BsonElement("Status")]
+        internal StatusEnum? Status { get; private set; }
 
 
         internal void ChangeName(string name)
@@ -105,5 +117,42 @@ namespace Domain.Users
             CustomGender = customGender;
 
         }
+
+        internal void ChangeTokenGenerate()
+        {
+            TokenGenerate = Guid.NewGuid().ToString().Substring(0,7).ToUpper();
+
+            ChangeTokenGenerateDate();
+        }
+
+        private void ChangeTokenGenerateDate()
+        {
+            TokenGenerateDate = DateTime.Now.BrazilTimeZone();
+        }
+
+
+
+        internal void ClearTokenGenerate()
+        {
+
+            TokenGenerate = null;
+            TokenGenerateDate = null;
+        }
+
+        protected void ChangeStatus(StatusEnum? status)
+        {
+            Status = status;
+        }
+
+        internal void ValidateUpdatePasswordToken(string token, User user)
+        {
+            var today = DateTime.Now.BrazilTimeZone();
+            var diffTime = today.Subtract(user.TokenGenerateDate.Value);
+            if (token != user.TokenGenerate || diffTime.Minutes >= 10)
+                throw new DomainException("Token invalido. Tente novamente");
+
+            ChangeStatus(StatusEnum.Authenticated);
+        }
+
     }
 }

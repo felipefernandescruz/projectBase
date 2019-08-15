@@ -1,18 +1,24 @@
 ﻿<Properties StartupConfiguration="{80FFCA32-3436-426F-B92C-CBB8C8B90A39}|Default">
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Infrastructure/Repository/RepositoryBase.cs" Line="7" Column="111" />
+      <File FileName="Domain/Users/UserService.cs" Line="112" Column="1" />
+      <File FileName="Domain/Users/User.cs" Line="12" Column="35" />
+      <File FileName="Domain/Users/UserRepository.cs" Line="8" Column="44" />
+      <File FileName="Infrastructure/Repository/RepositoryBase.cs" Line="12" Column="49" />
+      <File FileName="Domain/Base/BaseEntity.cs" Line="2" Column="13" />
+      <File FileName="Web/Filter/ExceptionFilter.cs" Line="42" Column="1" />
+      <File FileName="Infrastructure/Base/BaseEntity.cs" Line="2" Column="13" />
+      <File FileName="Infrastructure/Extensions/DateTimeExtensions.cs" Line="2" Column="17" />
+      <File FileName="Infrastructure/Extensions/StringExtensions.cs" Line="3" Column="11" />
+      <File FileName="Infrastructure/Repository/IRepositoryBase.cs" Line="5" Column="17" />
+      <File FileName="Domain/Users/IUserRepository.cs" Line="2" Column="13" />
+      <File FileName="Domain/Base/ServiceBase.cs" Line="3" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ProjectBase" expanded="True" selected="True">
-            <Node name="Domain" expanded="True" />
-          </Node>
+          <Node name="ProjectBase" selected="True" />
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
@@ -21,7 +27,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Web/Controllers/UserController.cs" relfile="Web/Controllers/UserController.cs" line="28" column="1" />
+      <Breakpoint file="/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/Users/UserService.cs" relfile="Domain/Users/UserService.cs" line="112" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Infrasctructure.Repository;
+using Infrastructure.Repository;
 
 namespace Domain.Users
 {

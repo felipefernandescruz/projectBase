@@ -3,7 +3,7 @@ using Infrastructure.Extensions;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace Domain.Base
+namespace Infrastructure.Base
 {
     public class BaseEntity : IBaseEntity
     {

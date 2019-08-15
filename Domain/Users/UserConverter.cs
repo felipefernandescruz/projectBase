@@ -17,7 +17,8 @@ namespace Domain.Users
                 lastName = entity.LastName,
                 email = entity.Email,
                 dateOfBirth = entity.DateOfBirth,
-                gender = entity.Gender
+                gender = entity.Gender,
+                pronoun = entity.Pronoun
             };
 
             return viewModel;

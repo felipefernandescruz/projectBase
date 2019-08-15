@@ -12,7 +12,7 @@ namespace Domain.Users.Models
         public string password { get; set; }
         public DateTime? dateOfBirth { get; set; }
         public GenderEnum? gender { get; set; }
-        public PronounEnum? pronoum { get; set; }
+        public PronounEnum? pronoun { get; set; }
         public string customGender { get; set; }
     }
 }

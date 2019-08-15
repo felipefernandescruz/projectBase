@@ -33,9 +33,7 @@ export class UserService extends BaseService {
       .pipe(map(() => "O usuário foi criado com sucesso."))
       .pipe(
         catchError(message => {
-          return throwError(
-            message ? message : "O usuário foi criado com sucesso."
-          );
+          return throwError(message ? message : "Erro ao salvar o usuário");
         })
       );
   }
