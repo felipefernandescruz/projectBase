@@ -6,9 +6,10 @@ using Domain.Exceptions;
 using Domain.Shared.Enum;
 using Domain.Users.Models;
 using Infrastructure.Managers;
-
 using System.Text;
-using Infrastructure.Extensions;
+using System.Security.Claims;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace Domain.Users
 {
@@ -132,6 +133,36 @@ namespace Domain.Users
 
             SendCreatePasswordEmail(user.Email, user.Name, user.TokenGenerate);
            
+        }
+
+        public string Login(string email, string password)
+        {
+            var user = Repository.GetByEmail(email);
+
+            if (user == null || !user.HasPassword() || !user.ValidatePassword(password))
+                throw new DomainException("Login e/ou senha inválidos. Tente novamente.", System.Net.HttpStatusCode.Unauthorized);
+
+            if (user.DeletedAt != null)
+                throw new DomainException("Usuário excluído do sistema. Entre em contato com o(a) Administrador(a) ou o(a) responsável.", System.Net.HttpStatusCode.Unauthorized);
+
+            return CreateJwtToken(user.Id, user.Email, user.Name);
+        }
+
+        private string CreateJwtToken(string userId, string email, string name)
+        {
+
+            byte[] key = Convert.FromBase64String(ConfigManager.JwtSecret);
+            SymmetricSecurityKey securityKey = new SymmetricSecurityKey(key);
+            var signingCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
+
+            var payload = new JwtPayload(null, "", new List<Claim>(), null, null)
+            {
+                { "loggedUser", new { userId, email, name } }
+            };
+
+            var jwtToken = new JwtSecurityToken(new JwtHeader(signingCredentials), payload);
+            var jwtTokenHandler = new JwtSecurityTokenHandler();
+            return jwtTokenHandler.WriteToken(jwtToken);
         }
     }
 }

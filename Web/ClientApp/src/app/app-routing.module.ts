@@ -1,25 +1,25 @@
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
-import { AppGuard } from "./app.guard";
-import { authRoutes } from "./pages/auth/auth.router";
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { AppGuard } from './app.guard';
+import { authRoutes } from './pages/auth/auth.router';
 
 const routes: Routes = [
-  { path: "", redirectTo: "", pathMatch: "full" },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
     canActivate: [AppGuard],
-    path: "",
-    loadChildren: "./pages/home/home.module#HomePageModule"
+    path: 'home',
+    loadChildren: './pages/home/home.module#HomePageModule'
   },
   ...authRoutes,
   {
     canActivate: [AppGuard],
-    path: "user/new",
-    loadChildren: "./pages/user/user-form/user-form.module#UserFormPageModule"
+    path: 'user/new',
+    loadChildren: './pages/user/user-form/user-form.module#UserFormPageModule'
   },
   {
-    path: "user/athentication/:userEmail",
+    path: 'user/athentication/:userEmail',
     loadChildren:
-      "./pages/user/user-athentication/user-athentication.module#UserAthenticationPageModule"
+      './pages/user/user-athentication/user-athentication.module#UserAthenticationPageModule'
   }
 ];
 

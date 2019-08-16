@@ -3,6 +3,7 @@ import { BaseService } from "./base.service";
 import { Observable, throwError } from "rxjs";
 import { catchError, map } from "rxjs/operators";
 import { ChangePasswordModel } from "../models/change-password.model";
+import { LoginModel } from "../models/login.model";
 
 @Injectable({
   providedIn: "root"
@@ -32,9 +33,20 @@ export class AuthService extends BaseService {
     return this.httpGet().pipe(
       catchError(message => {
         return throwError(
-          message
-            ? message
-            : 'Erro ao gerar token. Tente novamente'
+          message ? message : "Erro ao gerar token. Tente novamente"
+        );
+      })
+    );
+  }
+
+  public login(data: LoginModel): Observable<string> {
+    this.setApiUrl(`/auth/login`);
+    this.setApiData(data);
+
+    return this.httpPost().pipe(
+      catchError(message => {
+        return throwError(
+          message ? message : "Erro ao efetuar o login. Tente novamente"
         );
       })
     );

@@ -1,10 +1,8 @@
 ﻿using System;
-using Domain.Base;
 using Domain.Exceptions;
 using Domain.Shared.Enum;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using System.Text;
 using Infrastructure.Extensions;
 using Infrastructure.Base;
 
@@ -153,6 +151,16 @@ namespace Domain.Users
                 throw new DomainException("Token invalido. Tente novamente");
 
             ChangeStatus(StatusEnum.Authenticated);
+        }
+
+        internal bool HasPassword()
+        {
+            return !string.IsNullOrEmpty(Password);
+        }
+
+        internal bool ValidatePassword(string password)
+        {
+            return Password.ValidateHash(password);
         }
 
     }

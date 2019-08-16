@@ -14,5 +14,6 @@ namespace Domain.Users
         void Delete(string id);
         void UpdatePassword(string email, string token, string password, string confirmPassword);
         void GenerateNewToken(string email);
+        string Login(string email, string password);
     }
 }

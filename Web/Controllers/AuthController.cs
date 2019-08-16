@@ -28,5 +28,12 @@ namespace Web.Controllers
         {
             Service.GenerateNewToken(email);
         }
+
+        [HttpPost]
+        [Route("login")]
+        public string Login([FromBody] LoginModel model)
+        {
+            return Service.Login(model.email, model.password);
+        }
     }
 }
