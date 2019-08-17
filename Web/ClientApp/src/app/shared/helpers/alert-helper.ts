@@ -1,5 +1,5 @@
-import { Injectable } from "@angular/core";
-import { AlertController } from "@ionic/angular";
+import { Injectable } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Injectable()
 export class AlertHelper {
@@ -7,12 +7,12 @@ export class AlertHelper {
 
   public async errorAlert(message: string, errorAction?: any) {
     const alert = await this.alertController.create({
-      header: "Erro",
+      header: 'Erro',
       subHeader: message,
       backdropDismiss: false,
       buttons: [
         {
-          text: "OK",
+          text: 'OK',
           handler: data => {
             if (errorAction) {
               errorAction();
@@ -27,12 +27,12 @@ export class AlertHelper {
 
   public async okAlert(message: string, okAction?: any) {
     const alert = await this.alertController.create({
-      header: "Informação",
+      header: 'Informação',
       subHeader: message,
       backdropDismiss: false,
       buttons: [
         {
-          text: "OK",
+          text: 'OK',
           handler: data => {
             if (okAction) {
               okAction();
@@ -51,12 +51,12 @@ export class AlertHelper {
     noAction?: any
   ) {
     const alert = await this.alertController.create({
-      header: title ? title : "Confirmação",
+      header: title ? title : 'Confirmação',
       subHeader: message,
       backdropDismiss: false,
       buttons: [
         {
-          text: "Não",
+          text: 'Não',
           handler: data => {
             if (noAction) {
               noAction();
@@ -64,10 +64,50 @@ export class AlertHelper {
           }
         },
         {
-          text: "Sim",
+          text: 'Sim',
           handler: data => {
             if (yesAction) {
               yesAction();
+            }
+          }
+        }
+      ]
+    });
+
+    alert.present();
+  }
+
+  public async presentPrompt(
+    message: string,
+    title?: string,
+    yesAction?: any,
+    noAction?: any
+  ) {
+    const alert = await this.alertController.create({
+      header: title ? title : 'Confirmação',
+      subHeader: message,
+      backdropDismiss: false,
+      inputs: [
+        {
+          name: 'email',
+          type: 'email',
+          placeholder: 'E-mail'
+        }
+      ],
+      buttons: [
+        {
+          text: 'Cancelar',
+          handler: data => {
+            if (noAction) {
+              noAction();
+            }
+          }
+        },
+        {
+          text: 'Confirmar',
+          handler: data => {
+            if (yesAction) {
+              yesAction(data);
             }
           }
         }

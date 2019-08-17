@@ -1,37 +1,25 @@
 ﻿<Properties StartupConfiguration="{80FFCA32-3436-426F-B92C-CBB8C8B90A39}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Infrastructure/Repository/RepositoryBase.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="Domain/Users/UserService.cs" Line="154" Column="1" />
-      <File FileName="Web/Controllers/AuthController.cs" Line="36" Column="1" />
-      <File FileName="Domain/Users/IUserService.cs" Line="17" Column="53" />
-      <File FileName="Infrastructure/Repository/IRepositoryBase.cs" Line="11" Column="21" />
-      <File FileName="Domain/Users/User.cs" Line="146" Column="23" />
-      <File FileName="Infrastructure/Managers/ConfigManager.cs" Line="3" Column="17" />
-      <File FileName="Web/Filter/ExceptionFilter.cs" Line="43" Column="20" />
-      <File FileName="Infrastructure/Repository/RepositoryBase.cs" Line="16" Column="70" />
+      <File FileName="Web/Controllers/AuthController.cs" />
+      <File FileName="Domain/Users/IUserService.cs" />
+      <File FileName="Infrastructure/Repository/IRepositoryBase.cs" />
+      <File FileName="Domain/Users/User.cs" />
+      <File FileName="Infrastructure/Managers/ConfigManager.cs" />
+      <File FileName="Web/Filter/ExceptionFilter.cs" />
+      <File FileName="Infrastructure/Repository/RepositoryBase.cs" />
+      <File FileName="Web/appsettings.json" Line="13" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ProjectBase" expanded="True">
-            <Node name="Domain" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True" />
-              </Node>
-              <Node name="Users" expanded="True">
-                <Node name="Models" expanded="True" />
-              </Node>
-            </Node>
+          <Node name="ProjectBase" expanded="True" selected="True">
             <Node name="Infrastructure" expanded="True">
               <Node name="Managers" expanded="True" />
-              <Node name="Repository" expanded="True">
-                <Node name="RepositoryBase.cs" selected="True" />
-              </Node>
+              <Node name="Repository" expanded="True" />
             </Node>
-            <Node name="Web" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Filter" expanded="True" />
-            </Node>
+            <Node name="Web" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -42,7 +30,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/Users/UserService.cs" relfile="Domain/Users/UserService.cs" line="154" column="1" />
+      <Breakpoint file="/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Domain/Users/UserService.cs" relfile="Domain/Users/UserService.cs" line="129" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

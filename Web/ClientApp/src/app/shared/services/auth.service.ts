@@ -1,12 +1,12 @@
-import { Injectable } from "@angular/core";
-import { BaseService } from "./base.service";
-import { Observable, throwError } from "rxjs";
-import { catchError, map } from "rxjs/operators";
-import { ChangePasswordModel } from "../models/change-password.model";
-import { LoginModel } from "../models/login.model";
+import { Injectable } from '@angular/core';
+import { BaseService } from './base.service';
+import { Observable, throwError } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
+import { ChangePasswordModel } from '../models/change-password.model';
+import { LoginModel } from '../models/login.model';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class AuthService extends BaseService {
   constructor() {
@@ -14,15 +14,14 @@ export class AuthService extends BaseService {
   }
 
   public authByEmail(data: ChangePasswordModel): Observable<string> {
-    console.log(data);
     this.setApiUrl(`/auth/password`);
     this.setApiData(data);
 
     return this.httpPut()
-      .pipe(map(() => "Senha cadastrada com sucesso!"))
+      .pipe(map(() => 'Senha cadastrada com sucesso!'))
       .pipe(
         catchError(message => {
-          return throwError(message ? message : "Erro ao autenticar o usuário");
+          return throwError(message ? message : 'Erro ao autenticar o usuário');
         })
       );
   }
@@ -33,7 +32,7 @@ export class AuthService extends BaseService {
     return this.httpGet().pipe(
       catchError(message => {
         return throwError(
-          message ? message : "Erro ao gerar token. Tente novamente"
+          message ? message : 'Erro ao gerar token. Tente novamente'
         );
       })
     );
@@ -46,7 +45,7 @@ export class AuthService extends BaseService {
     return this.httpPost().pipe(
       catchError(message => {
         return throwError(
-          message ? message : "Erro ao efetuar o login. Tente novamente"
+          message ? message : 'Erro ao efetuar o login. Tente novamente'
         );
       })
     );
