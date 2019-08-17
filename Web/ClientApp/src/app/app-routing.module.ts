@@ -7,8 +7,8 @@ const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
     canActivate: [AppGuard],
-    path: 'home',
-    loadChildren: './pages/home/home.module#HomePageModule'
+    path: '',
+    loadChildren: './pages/menu/menu.module#MenuPageModule'
   },
   ...authRoutes,
   {

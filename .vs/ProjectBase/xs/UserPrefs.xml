@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{80FFCA32-3436-426F-B92C-CBB8C8B90A39}|Default">
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Domain/Users/UserService.cs" Line="154" Column="1" />
-      <File FileName="Web/Controllers/AuthController.cs" />
-      <File FileName="Domain/Users/IUserService.cs" />
+      <File FileName="Domain/Users/UserService.cs" Line="165" Column="35" />
+      <File FileName="Web/Controllers/AuthController.cs" Line="36" Column="30" />
+      <File FileName="Domain/Users/IUserService.cs" Line="17" Column="16" />
       <File FileName="Infrastructure/Repository/IRepositoryBase.cs" />
       <File FileName="Domain/Users/User.cs" />
       <File FileName="Infrastructure/Managers/ConfigManager.cs" />
@@ -15,11 +15,21 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ProjectBase" expanded="True" selected="True">
+            <Node name="Domain" expanded="True">
+              <Node name="Users" expanded="True" />
+            </Node>
             <Node name="Infrastructure" expanded="True">
               <Node name="Managers" expanded="True" />
               <Node name="Repository" expanded="True" />
             </Node>
-            <Node name="Web" expanded="True" />
+            <Node name="Web" expanded="True">
+              <Node name="ClientApp" expanded="True">
+                <Node name="src" expanded="True">
+                  <Node name="app" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Controllers" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
