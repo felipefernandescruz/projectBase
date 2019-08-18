@@ -1,0 +1,29 @@
+<ion-menu>
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content padding>
+    <div *ngFor="let page of pages">
+      <ion-menu-toggle *ngIf="page.url">
+        <ion-item [routerLink]="page.url" routerDirection="root" routerLinkActive="active">
+          <ion-icon [name]="page.icon" slot="start"></ion-icon>
+          <ion-label text-wrap>{{ page.title }}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </div>
+    <div >
+      <ion-menu-toggle >
+          <ion-item  (click)="onLogoffClick()">
+            <ion-icon name="exit" slot="start"></ion-icon>
+            <ion-label text-wrap>Sair</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+    </div>
+
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="content" main></ion-router-outlet>

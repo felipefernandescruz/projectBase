@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/login"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Autenticação</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <form [formGroup]="userAuthenticationFormGroup" (ngSubmit)="onSubmit()">
+<p>Um <b>CÓDIGO DE ACESSO</b> foi enviado para o email: "{{changePasswordModel.email}}"</p>
+  <ion-item lines="full">
+        <ion-label position="floating" >Código de Verificação</ion-label>
+          <ion-input formControlName="token" style="text-transform: uppercase;"></ion-input>
+    </ion-item>
+<form-error [isSubmitted]="isSubmitted" [field]="userAuthenticationFormGroup.get('token')"></form-error>
+
+    <ion-button fill="outline" type="button" (click)="generateNewToken()">
+        <ion-icon slot="start" name="send"></ion-icon>
+        Enviar código novamente
+    </ion-button>
+
+    <ion-item lines="full">
+        <ion-label position="floating" >Senha</ion-label>
+          <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+<form-error [isSubmitted]="isSubmitted" [field]="userAuthenticationFormGroup.get('password')"></form-error>
+    <ion-item lines="full">
+        <ion-label position="floating" >Confirmar Senha</ion-label>
+          <ion-input type="password" formControlName="confirmPassword"></ion-input>
+    </ion-item>
+<form-error [isSubmitted]="isSubmitted" [field]="userAuthenticationFormGroup.get('confirmPassword')"></form-error>
+    <ion-button  type="submit">
+        <ion-icon slot="start" name="key"></ion-icon>
+        Novo Password
+    </ion-button>
+</form>
+</ion-content>

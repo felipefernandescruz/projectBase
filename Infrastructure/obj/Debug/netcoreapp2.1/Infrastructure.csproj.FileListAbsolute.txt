@@ -1,0 +1,14 @@
+/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Infrastructure/bin/Debug/netcoreapp2.1/Infrastructure.deps.json
+/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Infrastructure/bin/Debug/netcoreapp2.1/Infrastructure.runtimeconfig.json
+/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Infrastructure/bin/Debug/netcoreapp2.1/Infrastructure.runtimeconfig.dev.json
+/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Infrastructure/bin/Debug/netcoreapp2.1/Infrastructure.dll
+/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Infrastructure/bin/Debug/netcoreapp2.1/Infrastructure.pdb
+/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Infrastructure/obj/Debug/netcoreapp2.1/Infrastructure.csproj.CoreCompileInputs.cache
+/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Infrastructure/obj/Debug/netcoreapp2.1/Infrastructure.RazorAssemblyInfo.cache
+/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Infrastructure/obj/Debug/netcoreapp2.1/Infrastructure.RazorAssemblyInfo.cs
+/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Infrastructure/obj/Debug/netcoreapp2.1/Infrastructure.AssemblyInfoInputs.cache
+/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Infrastructure/obj/Debug/netcoreapp2.1/Infrastructure.AssemblyInfo.cs
+/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Infrastructure/obj/Debug/netcoreapp2.1/Infrastructure.RazorTargetAssemblyInfo.cache
+/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Infrastructure/obj/Debug/netcoreapp2.1/Infrastructure.dll
+/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Infrastructure/obj/Debug/netcoreapp2.1/Infrastructure.pdb
+/Users/felipefernandes/Desktop/Felipe/Projetos/ProjectBase/Infrastructure/obj/Debug/netcoreapp2.1/Infrastructure.csprojAssemblyReference.cache

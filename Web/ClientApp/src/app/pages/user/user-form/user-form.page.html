@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/login"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Cadastro</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <form [formGroup]="userFormGroup" (ngSubmit)="onSubmit()">
+    <ion-item lines="full">
+        <ion-label position="floating">Nome</ion-label>
+          <ion-input formControlName="name" type="text"></ion-input>
+    </ion-item>
+    <form-error [isSubmitted]="isSubmitted" [field]="userFormGroup.get('name')"></form-error>
+    <ion-item lines="full">
+        <ion-label position="floating">Sobrenome</ion-label>
+        <ion-input formControlName="lastName" type="text"></ion-input>
+    </ion-item>
+<form-error [isSubmitted]="isSubmitted" [field]="userFormGroup.get('lastName')"></form-error>
+    <ion-item lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input formControlName="email" type="email"></ion-input>
+    </ion-item>
+<form-error [isSubmitted]="isSubmitted" [field]="userFormGroup.get('email')"></form-error>
+    <ion-item>
+      <ion-label position="stacked">Data de aniversário</ion-label>
+      <ion-input formControlName="dateOfBirth" type="date" >
+      </ion-input>
+    </ion-item>
+<form-error [isSubmitted]="isSubmitted" [field]="userFormGroup.get('dateOfBirth')"></form-error>
+    <ion-item>
+      <ion-label>Gênero</ion-label>
+      <ion-select formControlName="genderEnum" placeholder="Selecione" >
+         <ion-select-option *ngFor="let gender of genderEnumList" [value]="gender.value">{{gender.name}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <form-error [isSubmitted]="isSubmitted" [field]="userFormGroup.get('genderEnum')"></form-error>
+    <div *ngIf="selectedGenderController">
+      <ion-item >
+        <ion-label>Selecione seu pronome</ion-label>
+        <ion-select formControlName="pronoun" placeholder="Selecione">
+          <ion-select-option *ngFor="let pronoun of pronounEnumList" [value]="pronoun.value">{{pronoun.name}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <form-error [isSubmitted]="isSubmitted" [field]="userFormGroup.get('pronoun')"></form-error>
+      <ion-item lines="full">
+          <ion-input formControlName="customGender" type="text" placeholder="Informe seu gênero (Opicional)"></ion-input>
+      </ion-item>
+      <form-error [isSubmitted]="isSubmitted" [field]="userFormGroup.get('customGender')"></form-error>
+    </div>
+
+
+    <ion-button  type="submit">
+        <ion-icon slot="start" name="save"></ion-icon>
+        Salvar
+    </ion-button>
+  </form>
+</ion-content>

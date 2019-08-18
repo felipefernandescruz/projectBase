@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="loginFormGroup" (ngSubmit)="onSubmit()">
+    <ion-item lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input formControlName="email" type="email"></ion-input>
+    </ion-item>
+    <form-error [isSubmitted]="isSubmitted" [field]="loginFormGroup.get('email')"></form-error>
+    <ion-item lines="full">
+        <ion-label position="floating">Senha</ion-label>
+        <ion-input formControlName="password" type="password"></ion-input>
+    </ion-item>
+    <form-error [isSubmitted]="isSubmitted" [field]="loginFormGroup.get('password')"></form-error>
+
+    <a (click)="promptAlertHelper()">Esqueceu a senha?</a>
+    <ion-button type="submit">
+        Entrar
+    </ion-button>
+
+      <ion-button type="button" (click)="userRegisterClick()">
+        Cadastrar
+      </ion-button>
+  </form>
+
+</ion-content>

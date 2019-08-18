@@ -1,0 +1,6 @@
+<p padding-left [hidden]="!isRequiredError()">
+  {{ requiredMessage ? requiredMessage : 'Campo obrigatório' }}
+</p>
+<p padding-left [hidden]="!isEmailError()">
+  Email inválido
+</p>
