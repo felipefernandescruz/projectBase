@@ -1,15 +1,20 @@
 ﻿<Properties StartupConfiguration="{80FFCA32-3436-426F-B92C-CBB8C8B90A39}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Infrastructure/Repository/RepositoryBase.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Infrastructure/Managers/EmailManager.cs">
     <Files>
-      <File FileName="Infrastructure/Extensions/DateTimeExtensions.cs" Line="1" Column="1" />
-      <File FileName="Infrastructure/Extensions/StringExtensions.cs" Line="1" Column="1" />
-      <File FileName="Infrastructure/Repository/IRepositoryBase.cs" Line="2" Column="1" />
-      <File FileName="Infrastructure/Repository/RepositoryBase.cs" Line="2" Column="1" />
+      <File FileName="Infrastructure/Managers/EmailManager.cs" Line="11" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ProjectBase" expanded="True" />
+          <Node name="ProjectBase" expanded="True">
+            <Node name="Domain" expanded="True" />
+            <Node name="Infrastructure" expanded="True">
+              <Node name="Managers" expanded="True">
+                <Node name="EmailManager.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="Web" expanded="True" />
+          </Node>
         </State>
       </Pad>
     </Pads>

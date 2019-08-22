@@ -8,8 +8,9 @@ namespace Infrastructure.Managers
 {
     public static class EmailManager
     {
-        private static readonly string _emailAccount = "ffcompanyteste@gmail.com";
-        private static readonly string _emailPassword = "ffCompany123";
+        //TODO
+        private static readonly string _emailAccount = "email@gmail.com";
+        private static readonly string _emailPassword = "SENHA";
         private static readonly string _smtpClient = "smtp.gmail.com";
         private static readonly int _smtpPort = 587;
 
